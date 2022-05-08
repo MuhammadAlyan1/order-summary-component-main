@@ -1,0 +1,217 @@
+/*
+======================
+All
+======================
+ */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/*
+ ======================
+ Body
+ ======================
+  */
+
+body {
+  font-size: 16px;
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+
+  height: 100vh;
+  background-color: var(--very-pale-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+ ======================
+ container
+ ======================
+  */
+
+.container {
+  margin: 2rem;
+  max-width: 450px;
+  font-family: "Red Hat Display", sans-serif;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 5px 10px 15px 1px rgb(202, 197, 197);
+  overflow: hidden;
+}
+
+/*
+ ======================
+ image-div
+ ======================
+  */
+
+.image-div {
+  width: fit-content;
+  overflow: hidden;
+}
+
+/*
+ ======================
+ svg-annual-change
+ ======================
+  */
+
+.svg-annual-change {
+  height: 5rem;
+  background-color: var(--very-pale-blue);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.svg-annual-change svg {
+  margin: 0px 5% 0px 5%;
+}
+
+.annual-plan {
+  margin-right: 30%;
+}
+
+#plan {
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+
+#price {
+  color: var(--desaturated-blue);
+}
+
+#change {
+  color: var(--bright-blue);
+  font-weight: 700;
+}
+
+#change:hover {
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+/*
+ ======================
+ content-div
+ ======================
+  */
+
+.content-div {
+  padding: 8% 10% 8% 10%;
+  text-align: center;
+}
+
+/*
+ ======================
+ order-summary
+ ======================
+  */
+
+.order-summary h1 {
+  color: var(--dark-blue);
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.order-summary p {
+  font-weight: 500;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--desaturated-blue);
+}
+
+/*
+ ======================
+ payment
+ ======================
+  */
+
+#payment {
+  display: block;
+  width: 100%;
+  border-radius: 13px;
+  border: 0px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: inherit;
+  color: var(--very-pale-blue);
+  background-color: var(--bright-blue);
+  box-shadow: 5px 10px 15px 1px rgb(202, 197, 197);
+}
+
+#payment:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+/*
+ ======================
+ cancel
+ ======================
+  */
+
+#cancel {
+  display: block;
+  text-align: center;
+  color: var(--desaturated-blue);
+  font-weight: 900;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+/*
+ ======================
+ Desktop
+ ======================
+  */
+
+@media (min-width: 1000px) {
+  body {
+    background: url("images/pattern-background-desktop.svg"),
+      linear-gradient(90deg, hsl(225, 100%, 94%), hsl(225, 100%, 94%));
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+/*
+ ======================
+ Mobile
+ ======================
+  */
+
+@media (max-width: 999px) {
+  body {
+    background: url("images/pattern-background-mobile.svg"),
+      linear-gradient(90deg, hsl(225, 100%, 94%), hsl(225, 100%, 94%));
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .svg-annual-change svg {
+    margin: 0px;
+  }
+
+  .annual-plan {
+    margin: 0px;
+  }
+
+  .svg-annual-change {
+    justify-content: space-around;
+  }
+}
